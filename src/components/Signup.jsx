@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -30,9 +30,16 @@ const Signup = () => {
         }
     }
 
+    useEffect(() => {
+        document.title = "Sign up";
+    }, []);
+
     return (
         <>
-            <div className="row">
+            <div className="row mt-5">
+                <div className="col-md-5">
+                    <img src="signup.png" alt="sign up" className="img-fluid" />
+                </div>
                 <div className="col-lg-5 mx-auto">
                     <div className="sign-container p-lg-4 mt-5">
                         <h3 className='mb-4'><strong>Sign up</strong></h3>
